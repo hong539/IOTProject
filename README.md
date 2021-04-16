@@ -15,3 +15,7 @@ Introduction to IoT: Build an MQTT Server Using Raspberry Pi
 https://appcodelabs.com/introduction-to-iot-how-to-build-a-simple-mqtt-subscriber-using-esp8266
 
 Introduction to IoT: Build a Simple MQTT Subscriber Using ESP8266
+
+https://swf.com.tw/?p=1089
+
+ESP8266 UPLOAD DATA to ThingSpeak MQTT SERVER
