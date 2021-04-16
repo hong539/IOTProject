@@ -19,3 +19,7 @@ Introduction to IoT: Build a Simple MQTT Subscriber Using ESP8266
 https://swf.com.tw/?p=1089
 
 ESP8266 UPLOAD DATA to ThingSpeak MQTT SERVER
+
+https://www.libhttp.org/
+
+LibHTTP – Open Source HTTP Library in C
