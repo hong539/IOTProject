@@ -31,3 +31,8 @@ https://medium.com/feveral%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/%E7%94%A
 https://notfalse.net/47/c-socket-http-client
 
 以 C Socket 實作 HTTP Client
+
+https://www.raspberrypi.org/forums/viewtopic.php?t=237454
+
+How to connect a C program with a webpage (RPI 3+ )
+
