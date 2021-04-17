@@ -1,0 +1,25 @@
+- MQTT_Public Have Passowrd
+
+mosquitto_pub -h hostlocal -u mqtt_username -P mqtt_password -t "topic" -m "Hello"
+
+- MQTT_Subscribe Have Passowrd
+
+mosquitto_sub -h hostlocal  -u mqtt_username -P mqtt_password -t "topic"
+
+---------------------------------------------------------------
+
+- MQTT_Public No Passowrd
+
+mosquitto_pub -h hostlocal -t "topic" -m "Hello"
+
+- MQTT_Subscribe No Passowrd
+
+mosquitto_sub -h hostlocal -t "topic"
+
+================================================================
+-d      enable debug messages.
+-h 	hostlocal (IP adress raspberry pi)
+-u	username MQTT
+-P	password MQTT
+-m	message (message you want to sent)
+
