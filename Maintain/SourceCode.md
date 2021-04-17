@@ -43,3 +43,7 @@ Introduction to IoT: How to Build a Simple MQTT Subscriber Using ESP8266
 https://lastminuteengineers.com/esp8266-nodemcu-arduino-tutorial/
 
 esp8266-nodemcu-arduino-tutorial
+
+https://randomnerdtutorials.com/esp32-esp8266-raspberry-pi-lamp-server/
+
+ESP32/ESP8266 Publish Data to Raspberry Pi LAMP Server
