@@ -1,0 +1,36 @@
+RaspberryPi command:
+mosquitto_pub -h raspberrypi -t "test/message" -m "on"
+
+Then, ESP8266 Serial Monitor
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020ad38 epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: cont
+sp: 3ffffd90 end: 3fffffc0 offset: 0190
+3fffff20:  00330013 00000000 3ffee47c 4020404a  
+3fffff30:  3fffff60 00000001 00000002 40201292  
+3fffff40:  3fffdad0 0000000c 3ffee47c 40205cb0  
+3fffff50:  000058b7 00000000 3ffee47c 40203204  
+3fffff60:  007a1201 7080c018 00000100 3ffee5a0  
+3fffff70:  00000000 3ffee5fc 000001f4 40204014  
+3fffff80:  3fffdad0 00000000 3ffee47c 3ffee5a0  
+3fffff90:  3fffdad0 00000000 3ffee47c 4020122c  
+3fffffa0:  feefeffe feefeffe 3ffee560 4020412c  
+3fffffb0:  feefeffe feefeffe 3ffe84f0 40100bed  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:2, boot mode:(3,7)
+
+load 0x4010f000, len 3584, room 16 
+tail 0
+chksum 0xb0
+csum 0xb0
+v2843a5ac
+~ld
