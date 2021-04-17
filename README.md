@@ -36,3 +36,7 @@ https://www.raspberrypi.org/forums/viewtopic.php?t=237454
 
 How to connect a C program with a webpage (RPI 3+ )
 
+https://pubsubclient.knolleary.net/api
+
+Arduino Client for MQTT
+
