@@ -41,10 +41,12 @@ void loop()
   if (!client.connected()) {
       connectMQTT();
     }
+    
     // this is ESSENTIAL!
     client.loop();
     // idle
     delay(500);
+    client.publish("123", "hello from ESP8266");
 
 }
 
@@ -77,9 +79,9 @@ void connectMQTT()
     if (client.connect(clientId.c_str())) {
       Serial.println("MQTT connected");
       // Once connected, publish an announcement...
-      client.publish("123", "hello from ESP8266");
+      //client.publish("123", "hello from ESP8266");
       // ... and resubscribe
-      client.subscribe("123");
+      //client.subscribe("123");
     } else {
       Serial.printf("MQTT failed, state %s, retrying...\n", client.state());
       // Wait before retrying
@@ -99,8 +101,4 @@ void callback(char *msgTopic, byte *msgPayload, unsigned int msgLength)
   }
   strncpy(message, (char *)payload, msgLength);
   message[msgLength] = '\0';
-  
-
-
-
 }
