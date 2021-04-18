@@ -52,3 +52,7 @@ ESP32/ESP8266 Publish Data to Raspberry Pi LAMP Server
 https://randomnerdtutorials.com/esp8266-nodemcu-http-post-ifttt-thingspeak-arduino/
 
 ESP8266 NodeMCU HTTP POST with Arduino IDE (ThingSpeak and IFTTT.com)
+
+https://randomnerdtutorials.com/esp8266-nodemcu-http-get-post-arduino/#http-post
+
+https://randomnerdtutorials.com/esp8266-nodemcu-http-get-post-arduino/#http-post
