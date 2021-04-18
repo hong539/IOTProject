@@ -55,4 +55,4 @@ ESP8266 NodeMCU HTTP POST with Arduino IDE (ThingSpeak and IFTTT.com)
 
 https://randomnerdtutorials.com/esp8266-nodemcu-http-get-post-arduino/#http-post
 
-https://randomnerdtutorials.com/esp8266-nodemcu-http-get-post-arduino/#http-post
+3. ESP8266 HTTP POST: URL Encoded, JSON Data Object, Plain Text
