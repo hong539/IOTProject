@@ -2,6 +2,7 @@ Collect code from these links:
 
 https://makecademy.com/connect-esp8266-raspberry-pi
 
+
 Connect the ESP8266 WiFi Chip to your Raspberry Pi
 
 https://www.raspberrypi.org/documentation/remote-access/web-server/
@@ -47,3 +48,7 @@ esp8266-nodemcu-arduino-tutorial
 https://randomnerdtutorials.com/esp32-esp8266-raspberry-pi-lamp-server/
 
 ESP32/ESP8266 Publish Data to Raspberry Pi LAMP Server
+
+https://randomnerdtutorials.com/esp8266-nodemcu-http-post-ifttt-thingspeak-arduino/
+
+ESP8266 NodeMCU HTTP POST with Arduino IDE (ThingSpeak and IFTTT.com)
