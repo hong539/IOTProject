@@ -56,3 +56,11 @@ ESP8266 NodeMCU HTTP POST with Arduino IDE (ThingSpeak and IFTTT.com)
 https://randomnerdtutorials.com/esp8266-nodemcu-http-get-post-arduino/#http-post
 
 3. ESP8266 HTTP POST: URL Encoded, JSON Data Object, Plain Text
+
+https://zoomadmin.com/HowToInstall/UbuntuPackage/libmariadb-dev-compat
+
+MariaDB
+
+https://atceiling.blogspot.com/2020/03/raspberry-pi-61mysqlmariadb.html
+
+Raspberry Pi 筆記(61)：安裝MySQL(MariaDB)資料庫及管理工具Adminer
