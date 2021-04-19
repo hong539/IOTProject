@@ -64,3 +64,7 @@ MariaDB
 https://atceiling.blogspot.com/2020/03/raspberry-pi-61mysqlmariadb.html
 
 Raspberry Pi 筆記(61)：安裝MySQL(MariaDB)資料庫及管理工具Adminer
+
+https://www.libhttp.org/
+
+LibHTTP – Open Source HTTP Library in C
