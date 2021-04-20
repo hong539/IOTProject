@@ -1,0 +1,60 @@
+https://www.nginx.com/resources/wiki/start/
+
+https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
+
+https://wiki.debian.org/Nginx/DirectoryStructure
+
+sudo /etc/init.d/nginx start
+
+sudo nginx -t
+
+/etc/nginx/conf.d/default.conf
+
+/etc/nginx/nginx.conf
+
+
+hostname -I
+
+/var/www/html
+
+
+delete nginx include configuration file
+
+sudo apt-get --purge remove nginx
+
+
+
+sudo apt-get autoremove
+
+list related softwares related to nginx then remove them
+
+dpkg --get-selections|grep nginx
+sudo apt-get --purge remove nginx
+sudo apt-get --purge remove nginx-common
+sudo apt-get --purge remove nginx-core
+
+look up process nginx then kill
+
+ps -ef |grep nginx
+sudo kill -9 XXX
+
+search nginx related files
+
+sudo  find  /  -name  nginx*
+sudo rm -rf file
+
+
+
+install nginx
+
+sudo apt-get update
+sudo apt-get install nginx
+
+
+test nginx 
+
+sudo nginx -t
+
+nginx restart
+
+sudo service nginx restart
