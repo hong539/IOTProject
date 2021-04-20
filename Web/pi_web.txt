@@ -2,56 +2,64 @@
 <html lang="zh-TW">
 <head>
   <meta charset="utf-8" />
-  <title>¥ººz©~Æa∞£¿„®t≤Œ</title>
+  <title>Pi-web</title>
   <style>
-    td 
-    {
+    td {
     text-align: center;
     vertical-align: middle;
     }
   </style>
 
 </head>
-<body>
-  <h1 align="center">My Room</h2>
+<body background="http://cdn.lowgif.com/full/a35a71eed5339943-.gif">
+  <h1 align="center" color="white">Êô∫ÊÖßÂÆ∂Â±ÖÈô§ÊøïÁ≥ªÁµ±</h2>
+  <br>
+  <iframe frameborder="0"
+             noresize="noresize"
+             style="position: absolute; background: transparent; width: 30%; height:80%;"
+             src="https://www.cwb.gov.tw/V8/C/W/OBS_County.html?ID=menu"
+             frameborder="0">
+  </iframe>
   <table align=center  border="0" cellpadding="5" cellspacing="1" bgcolor="#aaaaaaa"  
-   font-family:Verdana; color:black;">
+   font-family:Verdana; color:black;>
   <colgroup span="2" style="background-color: gray;"></colgroup>
   <colgroup style="background-color: green;"></colgroup>
   
+  <h1 align="center">Ê≠∑Âè≤Êï∏ÂÄº</h2>
   <tr>
-    <td width="100" height="100" bgcolor="green" >
-    <a href="https://yahoo.com.tw" target="_blank">ESP8266-1</a></td>
+    <td width="100" height="100" bgcolor="#80ff00" >
+    <a href="http://192.168.43.211/esp-data.php" target="_blank">ESP8266-1</a></td>
  
-    <td width="100" height="100" bgcolor="green" >
+    <td width="100" height="100" bgcolor="Gray" >
     <a href="https://yahoo.com.tw" target="_blank"></a></td>
 
-    <td width="100" height="100" bgcolor="green" >
+    <td width="100" height="100" bgcolor="#80ff00" >
     <a href="https://yahoo.com.tw" target="_blank">ESP8266-2</a></td>
   </tr>
 
   <tr>
-    <td width="100" height="100" bgcolor="green" >
+    <td width="100" height="100" bgcolor="Gray" >
     <a href="https://yahoo.com.tw" target="_blank"></a></td>    
 
-    <td width="100" height="100" bgcolor="green" >
+    <td width="100" height="100" bgcolor="#80ff00" >
     <a href="https://yahoo.com.tw" target="_blank">ESP8266-3</a></td>
 
-    <td width="100" height="100" bgcolor="green" >
+    <td width="100" height="100" bgcolor="Gray" >
     <a href="https://yahoo.com.tw" target="_blank"></a></td>   
   </tr>
 
   <tr>
-    <td width="100" height="100" bgcolor="green" >
+    <td width="100" height="100" bgcolor="#80ff00" >
     <a href="https://yahoo.com.tw" target="_blank">ESP8266-4</a></td>
  
-    <td width="100" height="100" bgcolor="green" >
+    <td width="100" height="100" bgcolor="Gray" >
     <a href="https://yahoo.com.tw" target="_blank"></a></td>
 
-    <td width="100" height="100" bgcolor="green" >
+    <td width="100" height="100" bgcolor="#80ff00" >
     <a href="https://yahoo.com.tw" target="_blank">ESP8266-5</a></td>
   </tr>
 </table>
+
 
 </body>
 </html>
