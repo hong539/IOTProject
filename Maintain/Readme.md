@@ -21,3 +21,6 @@ AJAX test:
 ESP 8266 send msg to Raspberry Pi 3 done
 
 Results:cancel
+
+https://stackoverflow.com/questions/51603067/installing-connector-c-for-mariadb
+mariadb-connector-c-devel building
