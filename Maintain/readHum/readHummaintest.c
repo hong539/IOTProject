@@ -6,6 +6,15 @@
 #define N 100
 #define M 100
 
+int main (int argc, char * argv[])
+{
+
+  readHum();
+
+
+  return 0;
+}
+
 char readHum()
 {
   char temp[N][M];
