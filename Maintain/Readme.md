@@ -15,9 +15,9 @@ Results:OK
 HTTP test:
 ESP 8266 send msg to Raspberry Pi 3 done
 
-Results:ready to test
+Results:OK
 
 AJAX test:
 ESP 8266 send msg to Raspberry Pi 3 done
 
-Results:ready to test
+Results:cancel
