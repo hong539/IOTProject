@@ -1,3 +1,0 @@
-//readHum.c
-
-char readHum();
