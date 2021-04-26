@@ -1,5 +1,5 @@
 #include <MQ135.h>
-#define ANALOGPIN A0
+#define ANALOGPIN D8
 
 int PPMStatus = 0;
 int PPMStatusOld = 0;
