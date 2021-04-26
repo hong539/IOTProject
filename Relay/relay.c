@@ -6,9 +6,6 @@
 */
 #include "relay.h"
  
-int main(int argc, char **argv) 
-{
 
 void relay_on_off(h);
 
-}
