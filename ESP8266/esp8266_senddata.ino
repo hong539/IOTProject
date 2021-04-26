@@ -6,7 +6,7 @@
 #include <DHT.h>
 
 // Replace with your network credentials
-const char* ssid     = "Yuan";
+const char* ssid     = "vivo";
 const char* password = "00000000";
 
 // REPLACE with your Domain name and URL path or IP address with path
