@@ -1,6 +1,18 @@
 #include <mysql/mysql.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+static char *host = "localhost";
+static char *user = "pi";
+static char *pass = "mysql";
+static char *dbanme = "testc";
+static char *selrow_Name = "SELECT humidity FROM SensorData";
+//Better yet, don't do a "SELECT * FROM mytable" in a program. It would be much better to name the fields you expect, so that you can be sure of the order of the fields returned.
+
+unsigned int port = 3306;
+static char *unix_socket = NULL;
+unsigned int flag = 0;
 
 void finish_with_error(MYSQL *con)
 {
@@ -19,13 +31,13 @@ int main(int argc, char **argv)
     exit(1);
   }
 
-  if (mysql_real_connect(con, "localhost", "pi", "mysql", "testdb", 0, NULL, 0) == NULL)
+  if (mysql_real_connect(con, host, user, pass, dbanme, port, unix_socket, flag) == NULL)
   {
     finish_with_error(con);
   }
 
   //Better yet, don't do a "SELECT * FROM mytable" in a program. It would be much better to name the fields you expect, so that you can be sure of the order of the fields returned.
-  if (mysql_query(con, "SELECT * FROM cars"))
+  if (mysql_query(con, selrow_Name))
   {
     finish_with_error(con);
   }
