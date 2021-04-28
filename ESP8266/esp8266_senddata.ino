@@ -1,9 +1,17 @@
-
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <WiFiClient.h>
 #include <Wire.h>
 #include <DHT.h>
+#include <MQ135.h>
+#define ANALOGPIN D8
+int PPMStatus = 0;
+int PPMStatusOld = 0;
+
+float  airTemperature, airHumidity, ppm, ppmbalanced, rzero;
+int initStep=1;                 // 1 = Connection in progress / 2 = Connection Done 
+
+MQ135 gasSensor = MQ135(ANALOGPIN);
 
 // Replace with your network credentials
 const char* ssid     = "vivo";
@@ -16,7 +24,7 @@ const char* serverName = "http://192.168.43.211/post-esp-data.php";
 // If you change the apiKeyValue value, the PHP file /post-esp-data.php also needs to have the same key 
 String apiKeyValue = "tPmAT5Ab3j7F9";
 
-String sensorName = "esp8266-1";
+String sensorName = "Angel";
 String sensorLocation = "myroom";
 
 int smokeA0 = D0;
@@ -59,13 +67,13 @@ void loop() {
     
     // Specify content-type header
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-
+    ppm = gasSensor.getPPM(); // 取得 ppm 值
     int analogSensor = analogRead(smokeA0);
     
     // Prepare your HTTP POST request data
     String httpRequestData = "api_key=" + apiKeyValue + "&sensor=" + sensorName
                           + "&location=" + sensorLocation + "&value1=" + String(dht.readTemperature()) +"°C"
-                          + "&value2=" + String(dht.readHumidity()) + "%" + "&value3="  + String(analogRead(smokeA0)) +"ppm";
+                          + "&value2=" + String(dht.readHumidity()) + "%" + "&value3="  + String(gasSensor.getPPM() ) +"ppm";
     Serial.print("httpRequestData: ");
     Serial.println(httpRequestData);
     
