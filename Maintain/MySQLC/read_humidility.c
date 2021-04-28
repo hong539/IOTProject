@@ -7,7 +7,7 @@ static char *host = "localhost";
 static char *user = "pi";
 static char *pass = "mysql";
 static char *dbanme = "testc";
-static char *selrow_Name = "SELECT humidity FROM SensorData";
+static char *selrow_Name = "SELECT humidity FROM SensorData WHERE id=(SELECT max(id) FROM SensorData)";
 //Better yet, don't do a "SELECT * FROM mytable" in a program. It would be much better to name the fields you expect, so that you can be sure of the order of the fields returned.
 
 unsigned int port = 3306;
