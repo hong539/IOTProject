@@ -1,5 +1,8 @@
 For test
 
+https://data.epa.gov.tw/api/v1/{DataID}?format={format}&year_month={yyyy_mm}&offset={offset}&limit={limit}&api_key={api-key}
+
+
 curl -X GET "https://data.epa.gov.tw/api/v1/aqx_p_02?api_key=31fd56ff-0fd4-4e1c-bb5f-de1df54be21e" -H "accept: */*"
 
 
