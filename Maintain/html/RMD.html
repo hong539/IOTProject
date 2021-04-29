@@ -1,0 +1,277 @@
+<!DOCTYh3E html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/ico/Dapino-Summer-Holiday-Palm-tree.ico">
+    <title>Air-Box</title>
+    
+    <style>
+      body
+      {
+        background-color: Gray;
+      }
+
+      header
+      {
+        font-size: 50px;
+      }
+
+      .boxheader
+      {
+        height: 100px;
+        background: #ecd6c7;
+        margin: 0 auto;
+        color: #FFFFFF
+      }
+
+      .boxnav
+      {
+        height: 100px;
+        background: #FFFFFF;
+       margin: 0 auto;
+        color: #000000
+      }
+
+      p
+      {
+        text-align:center;
+        line-height: 100px;
+      }
+
+      nav
+      {
+        background-color: Orange;
+        height: 100px;
+        font-size: 30px;
+      }
+
+      section
+      {
+        background-color: Gold;
+        /*width: 50%;*/
+        height: 700px;
+        margin-left: 12px;
+      }
+
+      /*article
+      {
+        background-color: Lime;
+        height: 400px;
+      }*/
+
+      
+      /*#left_part
+      {
+        width: 50%;
+        float: left;
+      }*/
+      
+
+      aside
+      {/*background-color: DodgerBlue;*/
+        width: 50%;
+        height: 700px;
+        float: left;
+        margin-left: -12px;
+      }
+
+      table
+      {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        text-align: center;
+        color: Gold;
+        font-size: 30px;
+        border-collapse: collapse;
+        /*background-color: Teal;*/
+      }
+
+      tr:nth-child(odd)
+      {
+        color: GoldenRod;
+        background-color: Gold;
+        border: 1px solid Tomato !important;
+      }      
+ 
+      tr:nth-child(even)
+      {
+        color: Snow;
+        background-color: Gold;
+        border: 1px solid Tomato !important;
+      }
+ 
+      tr:hover
+      {
+        font-size: 50px;
+        background-color: Tomato !important;
+      }
+ 
+      td
+      {
+        border: 1px solid Tomato !important;
+      }
+
+      footer
+      {
+        background-color: Cyan;
+        height: 150px;
+        /*clear: left;*/
+      }
+
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header>
+        <div class="boxheader">
+          <p>Air-Box</p>
+        </div>
+      </header>
+      
+      <nav>
+        <div class="boxnav">
+          <p>My Room</p>
+        </div>
+      </nav>
+
+      <div class="row">
+        <!-- <div id="left_part" class="col-9"> -->
+        <!-- <div id="left_part" class="col-md-9"> -->
+        <section class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h3 align="center">The latest data</h3>
+          
+        <!--<form>
+            <label for="sensor">Choose a sensor:</label>
+            <select id="sensor" name="sensor">
+              <option value="angel">Angel</option>
+              <option value="cherry">Cherry</option>
+              <option value="sean">Sean</option>
+              <option value="lulu">LuLu</option>
+            </select>
+          </form> -->
+          
+          
+          <button type="button" onclick="loadDoc()">cherry</button>
+          <button type="button" onclick="loadDoc2()">esp8266-1</button>
+          <button type="button" onclick="loadDoc3()">esp8266-2</button>
+          <button type="button" onclick="loadDoc4()">esp8266-3</button>    
+          <button type="button" onclick="loadDoc5()">esp8266-4</button>
+          
+          <p id="demo"></p>
+          <script>
+          function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/cherry.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+          //ds[0].split(" ")
+          //dd = ds[0].split(" ")
+          //dd[3], dd[4],dd[5]
+          
+          function loadDoc2() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/esp8266-1.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+          
+          function loadDoc3() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/esp8266-2.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+          </script>
+          
+          <iframe frameborder="0"
+             noresize="noresize"
+             style="text-align: right; background: transparent; width: 100%; height:100%;"
+             frameborder="0">
+          </iframe>
+        </section>
+        <!-- <div id="left_part" class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
+          <section>section</section>
+          <article>article</article>
+        </div> -->
+        <!-- <aside class="col-3">aside</aside> -->
+        <!-- <aside class="col-md-3">aside</aside> -->
+        
+        
+        <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <table>
+          <!-- <colgroup span="2" style="background-color: gray;"></colgroup>
+          <colgroup style="background-color: green;"></colgroup> -->
+          <tr>
+            <td style="width: 10%">1.</td> 
+            <td style="width: 90%">
+            <a href="http://192.168.43.211/esp-data.php" target="_blank">ESP8266-1</a></td>       
+          </tr>
+
+          <tr>
+            <td style="width: 10%">2.</td> 
+            <td style="width: 90%">
+            <a href="http://192.168.43.211/esp-data.php" target="_blank">ESP8266-1</a></td>       
+          </tr>
+
+          <tr>
+            <td style="width: 10%">3.</td> 
+            <td style="width: 90%">
+            <a href="http://192.168.43.211/esp-data.php" target="_blank">ESP8266-1</a></td>       
+          </tr>
+
+          <tr>
+            <td style="width: 10%">4.</td> 
+            <td style="width: 90%">
+            <a href="http://192.168.43.211/esp-data.php" target="_blank">ESP8266-1</a></td>       
+          </tr>
+
+          <tr>
+            <td style="width: 10%">5.</td> 
+            <td style="width: 90%">
+            <a href="http://192.168.43.211/esp-data.php" target="_blank">ESP8266-1</a></td>       
+          </tr>
+
+        </table>
+        </aside>
+      </div>
+
+      <footer>footer</footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+  </body>
+</html>

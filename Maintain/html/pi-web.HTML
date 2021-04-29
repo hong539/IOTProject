@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8" />
+  <title>Pi-web</title>
+  <style>
+    td {
+    text-align: center;
+    vertical-align: middle;
+    }
+  </style>
+
+</head>
+<body>
+  <h1 align="center" color="white">智慧家居除濕系統</h2>
+  <br>
+  
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/esp-data.php">
+      <label for="sensor">Choose a sensor:</label>
+      <select id="sensor" name="sensor">
+        <option value="angel">Angel</option>
+        <option value="cherry">Cherry</option>
+        <option value="sean">Sean</option>
+        <option value="lulu">LuLu</option>
+      </select>
+      <label for="type">Choose a type:</label>
+      <select id="type" name="type">
+        <option value="temperature">temperature</option>
+        <option value="humidity">humidity</option>
+        <option value="ppm">ppm</option>
+      </select>
+      <input type="submit">
+    </form>
+
+    <script>
+      
+       function car_sel(ev) {
+        evt =ev
+        console.log(ev.target.value);
+
+
+      }
+      cars.onchange = car_sel
+      ABC.onchange = car_sel
+    </script>
+  </body>
+</html>
+
+
+  
+  
+  <iframe frameborder="0"
+             noresize="noresize"
+             style="position: absolute; background: transparent; width: 30%; height:80%;"
+             
+             frameborder="0">
+  </iframe>
+  <table align=center  border="0" cellpadding="5" cellspacing="1" bgcolor="#aaaaaaa"  
+   font-family:Verdana; color:black;>
+  <colgroup span="2" style="background-color: gray;"></colgroup>
+  <colgroup style="background-color: green;"></colgroup>
+  
+  <h1 align="center">歷史數值</h2>
+  <tr>
+    <td width="100" height="100" bgcolor="#80ff00" >
+    <a href="http://192.168.43.211/esp-data.php" target="_blank">ESP8266-1</a></td>
+ 
+    <td width="100" height="100" bgcolor="Gray" >
+    <a href="https://yahoo.com.tw" target="_blank"></a></td>
+
+    <td width="100" height="100" bgcolor="#80ff00" >
+    <a href="https://yahoo.com.tw" target="_blank">ESP8266-2</a></td>
+  </tr>
+
+  <tr>
+    <td width="100" height="100" bgcolor="Gray" >
+    <a href="https://yahoo.com.tw" target="_blank"></a></td>    
+
+    <td width="100" height="100" bgcolor="#80ff00" >
+    <a href="https://yahoo.com.tw" target="_blank">ESP8266-3</a></td>
+
+    <td width="100" height="100" bgcolor="Gray" >
+    <a href="https://yahoo.com.tw" target="_blank"></a></td>   
+  </tr>
+
+  <tr>
+    <td width="100" height="100" bgcolor="#80ff00" >
+    <a href="https://yahoo.com.tw" target="_blank">ESP8266-4</a></td>
+ 
+    <td width="100" height="100" bgcolor="Gray" >
+    <a href="https://yahoo.com.tw" target="_blank"></a></td>
+
+    <td width="100" height="100" bgcolor="#80ff00" >
+    <a href="https://yahoo.com.tw" target="_blank">ESP8266-5</a></td>
+  </tr>
+</table>
+
+<?php
+$servername = "localhost";
+
+// REPLACE with your Database name
+$dbname = "phpmyadmin";
+// REPLACE with Database user
+$username = "phpmyadmin";
+// REPLACE with Database user password
+$password = "00000000";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT id, sensor, location, value1, value2, value3, reading_time FROM SensorData WHERE sensor='cherry'";
+
+echo '<table cellspacing="5" cellpadding="5">
+      <tr> 
+        <td>ID</td> 
+        <td>Sensor</td> 
+        <td>Location</td> 
+        <td>Value 1</td> 
+        <td>Value 2</td>
+        <td>Value 3</td> 
+        <td>Timestamp</td> 
+      </tr>';
+
+if ($result = $conn->query($sql)) {
+    while ($row = $result->fetch_assoc()) {
+        $row_id = $row["id"];
+        $row_sensor = $row["sensor"];
+        $row_location = $row["location"];
+        $row_value1 = $row["value1"];
+        $row_value2 = $row["value2"]; 
+        $row_value3 = $row["value3"]; 
+        $row_reading_time = $row["reading_time"];
+
+
+
+
+
+
+
+
+</body>
+</html>

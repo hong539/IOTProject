@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/ico/Dapino-Summer-Holiday-Palm-tree.ico">
+    <title>居家空氣盒子</title>
+    
+    <style>
+      /*body
+      {
+        background-color: Gray;
+      }*/
+
+      /*居家空氣盒子的樣式*/
+      .boxheader
+      {
+        height: 110px;
+        background: #FFFFFF;
+        margin: 0 auto;
+        color: #bcab9f;
+        font-size: 50px;
+        border-top:5px;
+        border-right:0px;
+        border-left:0px;
+        border-bottom:5px;
+        border-style:solid;
+        border-color:#bcab9f;
+        text-align:center;
+        line-height: 100px;
+      }
+
+      /*即時平均數值樣式與切版*/
+      .row
+      {
+        padding-left:12px;
+        padding-right:12px;
+      }
+      section
+      {
+        background-color: #d4c0b3;
+        height: 735px;
+        /*border-top:0px;
+        border-right:0px;
+        border-left:0px;
+        border-bottom:5px;
+        border-style:solid;
+        border-color:#bcab9f;*/
+      }
+
+      .immediately
+      {
+        height: 80px;
+        line-height:80px;
+        background: #d4c0b3;
+        margin: 0 auto;
+        font-size: 35px;
+        color: #FFFFFF;  
+        text-align:center;  
+      }
+
+      .css-table{
+        display: table;
+      }
+      .css-table .tbody{
+        display:table-row-group;
+      }
+      .css-table .tr{
+        display:table-row;
+        /*width: ;*/
+        height: 100px;
+        line-height:100px;
+        font-size: 30px;
+        text-align:center;
+        align-items: left;
+      }
+      .css-table .td{
+        display:table-cell;
+        width: 600px;
+      }
+
+      /*下拉式選單排版與樣式*/
+      nav
+      {
+        /*margin-left: -12px;*/
+        border-top:0px;
+        border-right:0px;
+        border-left:0px;
+        border-bottom:1px;
+        /* border-radius: 70px; */
+        border-style:solid;
+        border-color:#bcab9f;
+        height: 80px;
+      }
+
+      .droplist
+      {
+        height: 100px;
+        line-height: 80px;
+        background: #FFFFFF;
+        margin: 0 auto;
+        color: #bcab9f;
+        text-align:center;
+        font-size: 30px;
+      }
+
+      /*歷史數據切版與樣式*/
+      aside
+      {
+        height: 654px;
+        /*border-top:0px;
+        border-right:0px;
+        border-left:0px;
+        border-bottom:5px;
+        border-style:solid;
+        border-color:#bcab9f;*/
+        float: left;
+      }
+
+      /* .css-table2{
+        display: table;
+      }
+      .css-table2 .tbody{
+        display:table-row-group;
+      }
+      .css-table2 .tr{
+        display:table-row;
+      }
+      .css-table2 .td{
+        display:table-cell;
+        height: px;
+        line-height:33px;
+        font-size: 20px;
+        text-align:center;
+        width: 300px;
+      } */
+
+      footer
+      {
+        height: 30px;
+        line-height:30px;
+        text-align:center;
+        color: #adadb0;
+      }
+
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <header>
+        <div class="boxheader">
+          <p>居家空氣盒子</p>
+        </div>
+      </header> 
+      <div class="row">
+        <section class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="immediately">
+            <p>即時平均數值</p>
+          </div>
+          <button type="button" onclick="loadDoc()">cherry</button>
+          <button type="button" onclick="loadDoc2()">esp8266-1</button>
+          <button type="button" onclick="loadDoc3()">esp8266-2</button>
+          <button type="button" onclick="loadDoc4()">esp8266-3</button>    
+          <button type="button" onclick="loadDoc5()">esp8266-4</button>
+          
+          <p id="demo"></p>
+          <script>
+          function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/cherry.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+          //ds[0].split(" ")
+          //dd = ds[0].split(" ")
+          //dd[3], dd[4],dd[5]
+          
+          function loadDoc2() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/esp8266-1.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+          
+          function loadDoc3() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/esp8266-2.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+          </script>
+          <div id="css-table" class="css-table">
+            <div class="tbody">
+              <div class="tr">
+                <div class="td">溫度</div>
+                <div class="td">
+                  <svg width="20" height="20">
+                     <rect width="10" height="15" fill="yellow" />
+                  </svg>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="td">濕度</div>
+                <div class="td"></div>
+              </div>
+              <div class="tr">
+                <div class="td">空氣品質</div>
+                <div class="td"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div id="right_part" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <nav>
+            <form class="droplist";> 
+                <label for="sensor">Choose a sensor : </label>
+                <select id="sensor" name="sensor">
+                    <option value="angel">Angel</option>
+                    <option value="cherry">Cherry</option>
+                    <option value="sean">Sean</option>
+                    <option value="lulu">LuLu</option>
+                </select>
+            </form>
+
+            <script>
+
+                function car_sel(ev) {
+                    evt =ev
+                    console.log(ev.target.value);
+                    loadDoc();
+
+                }
+                sensor.onchange = car_sel
+                
+            </script>
+            <script>
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    ds = this.responseText.split(",");
+                    //ds[0];
+                    ds[0].split(" ");
+                    n=10;
+                    dd = ds.slice(n,n+30);
+                    
+                    ee=dd.map(x=>x.split(" "))
+                    ff = ee.map(x=>[x[3], x[4], x[5]]);
+                    gg = ff.map(x=>x.join('\t'))
+                    hh = gg.map(x=>x.split('\t')[0])
+                   
+                    sp = hh[0].slice(5)
+                    ii = hh.map(x=>x.split(sp)[0])
+                    ii= ii.map(x=>(x.split(sp)[0]-20)*10)
+                    ar = []
+                    ii.forEach((y, x)=>ar.push(`${x*11},${y}`))
+              
+                    draw1.setAttribute("points",  ar.join(" "));
+              
+              
+                    // document.getElementById("demo").innerHTML = gg.join('\n');  //顯示歷史數值
+                  }    
+                };
+                xhttp.open("GET", "http://192.168.43.211/cherry.php", true);
+                //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+                xhttp.send();
+              }
+            </script>
+          </nav>
+          <aside>
+            <div id="css-table" class="css-table">
+                <div class="tbody">
+                  <div class="tr">
+                    <div class="td">溫度</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">      
+                    <svg preserveAspectRatio="xMinYMin" width="300px" height="100px" viewbox="0,0,50,100" >
+                      <rect rx=0 width=600px height=100px fill='#bcab9f' stroke='#000000' stroke />
+                      <path id='vl' d="M0 0 v200"stroke='#000000'  stroke-dasharray="1 20" stroke-width="5"/>
+                      <polyline id="draw1" points="60, 110 65, 120" fill="none" stroke="#333" stroke-width="2"/>
+                    </svg> 
+                    </div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">濕度</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">空氣品質</div>
+                  </div>
+                </div>
+              </div>
+          </aside>
+        </div>
+
+        <footer>© Copyright</footer>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="loadDoc()">Request data1</button>
+<svg viewbox="0,0, 50,100" ><polyline id="draw1" points="60, 110 65, 120" fill="none" stroke="#333"/></svg>
+<pre id="demo"></pre>
+
+  <form >
+      <label for="sensor">Choose a sensor:</label>
+      <select id="sensor" name="sensor">
+        <option value="angel">Angel</option>
+        <option value="cherry">Cherry</option>
+        <option value="sean">Sean</option>
+        <option value="lulu">LuLu</option>
+      </select>
+
+    </form>
+
+    <script>
+
+      function car_sel(ev) {
+        evt =ev
+        console.log(ev.target.value);
+        loadDoc();
+
+      }
+      sensor.onchange = car_sel
+     
+    </script>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      ds = this.responseText.split(",");
+      //ds[0];
+      ds[0].split(" ");
+      n=10;
+      dd = ds.slice(n,n+30);
+      
+      ee=dd.map(x=>x.split(" "))
+      ff = ee.map(x=>[x[3], x[4], x[5]]);
+      gg = ff.map(x=>x.join('\t'))
+      hh = gg.map(x=>x.split('\t')[0])
+     
+     sp = hh[0].slice(5)
+      ii = hh.map(x=>x.split(sp)[0])
+      ii= ii.map(x=>(x.split(sp)[0]-20)*10)
+      ar = []
+      ii.forEach((y, x)=>ar.push(`${x},${y}`))
+
+draw1.setAttribute("points",  ar.join(" "));
+
+
+      document.getElementById("demo").innerHTML = gg.join('\n');
+    }    
+  };
+  xhttp.open("GET", "http://192.168.43.211/cherry.php", true);
+  //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+  xhttp.send();
+}
+
+//ds[0].split(" ")
+//dd = ds[0].split(" ")
+//dd[3], dd[4],dd[5]
+</script>
+
+</body>
+</html>

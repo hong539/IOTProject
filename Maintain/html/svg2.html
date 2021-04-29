@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="msg">msg</p>
+    <svg viewbox="0,0, 200, 200" width=200>
+      <rect rx=10 width=200 height=200 fill='#8EF' stroke='pink' stroke />
+      <circle cx=50 cy=50 r=2 />
+      <circle cx=30 cy=30 r=2 />
+      <path id='vl' d="M10 0 v200"stroke='#F00'  stroke-dasharray="1 49" stroke-width="10"/>
+      <text x="10" y="15" transform="rotate(270) translate(-100,-0)">10
+        <tspan x="10" dy="25">20</tspan>
+        <tspan x="10" dy="25">30</tspan>
+        <tspan x="10" dy="25">40</tspan>
+        <tspan x="10" dy="25">50</tspan>
+        <tspan x="10" dy="25">60</tspan>
+        <tspan x="10" dy="25" >70</tspan>
+      </text>
+      <!-- <path d="M10 10 h50"  stroke="#333"/> -->
+      <polyline points="60, 110 65, 120" stroke="#333"/>
+    </svg>
+<script>
+function move(ev) {
+  msg.innerText ="x:"+ ev.offsetX + ',' + "y:"+ ev.offsetX
+  var d = `M${ev.offsetX} 0 v200`
+  vl.setAttribute('d', d)
+  evt=ev
+}
+  cs = document.querySelectorAll('circle')
+  rt = document.querySelector('rect')
+  rt.onmousemove = move
+  cs.forEach(x=> x.onmouseenter=entry)
+  msg.innerText = cs[0].getAttribute('cx')
+  function entry(ev) {
+    var x = this.getAttribute('cx')
+    var y = this.getAttribute('cy')
+    msg.innerText = `x:${x} y:${y}`
+    evt = ev
+  }
+</script>
+  </body>
+</html>
