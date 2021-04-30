@@ -1,5 +1,7 @@
 For test
 
+https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Objects/JSON
+
 AQI pickup 5 resultes
 https://data.epa.gov.tw/api/v1/aqx_p_432?format=xml&limit=5&api_key=31fd56ff-0fd4-4e1c-bb5f-de1df54be21e
 
