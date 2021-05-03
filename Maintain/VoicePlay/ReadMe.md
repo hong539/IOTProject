@@ -1,3 +1,10 @@
+volume config
+
+alsamixer
+
+cvlc example.mp3
+
+
 Using a Microphone with a Raspberry Pi
 
 https://pimylifeup.com/raspberrypi-microphone/
