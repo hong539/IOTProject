@@ -2,6 +2,10 @@ volume config
 
 alsamixer
 
+example
+
+wget http://rpf.io/lamp3 -O example.mp3 --no-check-certificate
+
 cvlc example.mp3
 
 
