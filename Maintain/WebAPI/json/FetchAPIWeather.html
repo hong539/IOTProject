@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <link rel="Shortcut Icon" type="images/x-icon" href="images/ico/computer-icons-pitchfork-download-clip-art-devil-clipart.jpg">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+
     
 
 
@@ -16,7 +14,7 @@
       body
       {
         color: Gold;
-        background: url(images/WallpaperDog-17167859.gif) no-repeat;
+        background: url(E:/joe/examples/images/WallpaperDog-17167859.gif) no-repeat;
         background-size: 100% 100%;
       }
 
@@ -48,11 +46,11 @@
 
 
 
-    <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/jquery-ui.js"></script>
+    <script src="E:/joe/examples/js/jquery-1.12.4.js"></script>
+    <script src="E:/joe/examples/js/jquery-ui.js"></script>
 
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="E:/joe/examples/js/popper.min.js"></script>
+    <script src="E:/joe/examples/js/bootstrap.min.js"></script>
 
     <script>
 
@@ -71,7 +69,7 @@
       request.onload = function() {
         var noW_weather = request.response;
         populateHeader(noW_weather);
-        showHeroes(noW_weather);
+        showrecords(noW_weather);
       }
 
       function populateHeader(jsonObj) {
@@ -84,10 +82,10 @@
         header.appendChild(myPara);
       }
 
-      function shownow_Temp(jsonObj) {
+      function showrecords(jsonObj) {
         var records = jsonObj['records'];
 
-        for(i = 0; i < heroes.length; i++) {
+        for(i = 0; i < records.length; i++) {
           var myArticle = document.createElement('article');
           var myH2 = document.createElement('h2');
           var myPara1 = document.createElement('p');
@@ -95,12 +93,12 @@
           var myPara3 = document.createElement('p');
           var myList = document.createElement('ul');
 
-          myH2.textContent = heroes[i].name;
-          myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-          myPara2.textContent = 'Age: ' + heroes[i].age;
+          myH2.textContent = records[i].location;
+          myPara1.textContent = 'locationName: ' + records[i].locationName;
+          myPara2.textContent = 'Age: ' + records[i].age;
           myPara3.textContent = 'Superpowers:';
 
-          var superPowers = heroes[i].powers;
+          var superPowers = records[i].powers;
           for(j = 0; j < superPowers.length; j++) {
             var listItem = document.createElement('li');
             listItem.textContent = superPowers[j];
