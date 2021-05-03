@@ -1,3 +1,7 @@
+search keywords:voice examples on raspberry pi
+
+ALSA, jack audio connection kit
+
 volume config
 
 alsamixer
