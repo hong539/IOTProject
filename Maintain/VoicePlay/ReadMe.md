@@ -29,3 +29,6 @@ https://www.raspberrypi.org/forums/viewtopic.php?f=41&t=309861&p=1853128&hilit=d
 
 eSpeak text to speech (C Programming)
 http://espeak.sourceforge.net/
+
+Make Your Raspberry Pi Speak
+https://www.instructables.com/Make-your-Raspberry-Pi-speak/
