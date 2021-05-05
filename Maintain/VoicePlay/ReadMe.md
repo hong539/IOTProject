@@ -20,3 +20,6 @@ https://pimylifeup.com/raspberrypi-microphone/
 How to add a microphone to Raspberry Pi?
 
 https://raspberrytips.com/add-microphone-raspberry-pi/
+
+speech to text raspberry pi offline ver
+https://www.raspberrypi.org/forums/viewtopic.php?t=275910
