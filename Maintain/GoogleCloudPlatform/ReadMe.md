@@ -1,6 +1,10 @@
 Setting Up LAMP on Compute Engine
 https://cloud.google.com/community/tutorials/setting-up-lamp
 
+https://help.ubuntu.com/community/ApacheMySQLPHP#Troubleshooting_Phpmyadmin_.26_mysql-workbench
+
+https://help.ubuntu.com/community/phpMyAdmin
+
 Important
 
 Setting SQL User
