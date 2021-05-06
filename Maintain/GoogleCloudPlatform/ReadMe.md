@@ -8,7 +8,13 @@ https://help.ubuntu.com/community/phpMyAdmin
 Important
 
 Setting SQL User
-https://ithelp.ithome.com.tw/articles/10243649
+Create a user for phpMyAdmin
+
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
 
 
 
