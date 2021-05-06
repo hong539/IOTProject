@@ -32,3 +32,5 @@ web-based management
 Where to put web files on apache under Linux
 /var/www/html
 
+How to access xampp htdocs folder in Ubuntu 18.04.2
+https://askubuntu.com/questions/1120634/how-to-access-xampp-htdocs-folder-in-ubuntu-18-04-2
