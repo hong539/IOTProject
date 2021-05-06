@@ -8,6 +8,7 @@ https://help.ubuntu.com/community/phpMyAdmin
 Important
 
 Setting SQL User
+https://ithelp.ithome.com.tw/articles/10243649
 
 
 
