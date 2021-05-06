@@ -28,3 +28,7 @@ mariadb-connector-c-devel building
 
 Web Design
 web-based management
+
+Where to put web files on apache under Linux
+/var/www/html
+
