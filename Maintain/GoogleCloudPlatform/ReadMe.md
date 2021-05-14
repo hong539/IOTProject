@@ -4,7 +4,7 @@ https://cloud.google.com/community/tutorials/setting-up-lamp
 https://help.ubuntu.com/community/ApacheMySQLPHP#Troubleshooting_Phpmyadmin_.26_mysql-workbench
 
 
-Important
+Important!!!
 
 https://askubuntu.com/questions/763336/cannot-enter-phpmyadmin-as-root-mysql-5-7
 Setting SQL User
