@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/ico/Dapino-Summer-Holiday-Palm-tree.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <title>居家空氣盒子</title>
+    
+    <style>
+    
+      /*body
+      {
+        background-color: Gray;
+      }*/
+
+      /*居家空氣盒子的樣式*/
+      #boxheader
+      {
+        height: 110px;
+        background: #FFFFFF;
+        margin: 0 auto;
+        color: #bcab9f;
+        font-size: 7vmin;
+        border-top:5px;
+        border-right:0px;
+        border-left:0px;
+        border-bottom:5px;
+        border-style:solid;
+        border-color:#bcab9f;
+        text-align:center;
+        line-height: 100px;
+      }
+
+      /*即時數值樣式與切版*/
+      .row
+      {
+        padding-left:12px;
+        padding-right:12px;
+      }
+      section
+      {
+        background-color: #d4c0b3;
+        height: 880px;
+        width: 100%;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        /*border-top:0px;
+        border-right:0px;
+        border-left:0px;
+        border-bottom:5px;
+        border-style:solid;
+        border-color:#bcab9f;*/
+      }
+
+      .immediately
+      {
+        height: 80px;
+        line-height:80px;
+        background: #d4c0b3;
+        margin: 0 auto;
+        font-size: 3.8vh;
+        color: #FFFFFF;  
+        text-align:center;  
+      }
+
+      .css-table-im{
+        display: table;
+      }
+      .css-table-im .tbody{
+        display:table-row-group;
+      }
+      .css-table-im .tr{
+        display:table-row;
+      }
+      .css-table-im .td{
+        display:table-cell;
+        height: 170px;
+        line-height:150px;
+        font-size: 3vh;
+        text-align:center;
+        width: 300px;
+        color: #FFFFFF;
+      } 
+
+      /*下拉式選單排版與樣式*/
+      nav
+      {
+        /*margin-left: -12px;*/
+        border-top:0px;
+        border-right:0px;
+        border-left:0px;
+        border-bottom:1px;
+        /* border-radius: 70px; */
+        border-style:solid;
+        border-color:#bcab9f;
+        height: 80px;
+      }
+
+      #droplist
+      {
+        height: 100px;
+        line-height: 80px;
+        background: #FFFFFF;
+        margin: 0 auto;
+        color: #bcab9f;
+        text-align:center;
+        font-size: 3.8vh;
+      }
+
+      /*歷史數據切版與樣式*/
+      aside
+      {
+        height: 800px;
+        /*border-top:0px;
+        border-right:0px;
+        border-left:0px;
+        border-bottom:5px;
+        border-style:solid;
+        border-color:#bcab9f;*/
+        float: left;
+      }
+
+      .css-table{
+        display: table;
+      }
+      .css-table .tbody{
+        display:table-row-group;
+      }
+      .css-table .tr{
+        display:table-row;
+        /*width: ;*/
+        height: 60px;
+        line-height:60px;
+        font-size: 26px;
+        text-align:center;
+        align-items: left;
+      }
+      .css-table .tr2{
+        display:table-row;
+        /*width: ;*/
+        /*height: 100px;*/
+        line-height:0px;
+        font-size: 10px;
+        /*letter-spacing:3px;*/
+        text-align:center;
+        /*align-items: left;*/
+      }
+      .css-table .td{
+        display:table-cell;
+        width: 684px;
+      }
+
+      #msg, #msg2, #msg3
+      {
+        font-size: 20px;
+      }
+
+
+      footer
+      {
+        height: 50px;
+        line-height:50px;
+        text-align:center;
+        color: #adadb0;
+      }
+
+      #cwb
+      {
+        text-decoration:none;
+        color: #d4c0b3;
+      }
+
+      table
+      {
+        margin: auto;
+        font-size: 2.5vmin;
+      }
+
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+    <div class="container-fluid">
+      <header>
+        <div id="boxheader" >
+          <p>居家空氣盒子</p>
+        </div>
+      </header> 
+      <div class="row">
+        <section class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="immediately">
+            <p>即時數值</p>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-light" onclick="loadDoc()">Cherry's room</button>
+            <button type="button" class="btn btn-outline-light" onclick="loadDoc2()">LuLu's room</button>
+            <button type="button" class="btn btn-outline-light" onclick="loadDoc3()">Red's room</button>
+            <button type="button" class="btn btn-outline-light" onclick="loadDoc4()">Angel's room</button>  
+            <button type="button" class="btn btn-outline-light" onclick="loadDoc5()">Irene's room</button>
+          </div>
+          <p id="demo"></p>
+          <script>
+          function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("text1").innerHTML = [dd[3]];
+                document.getElementById("path1").setAttribute("stroke-dasharray",dd[3].slice(0,5).concat(' 100')) ;
+                document.getElementById("text2").innerHTML = [dd[4]];
+                document.getElementById("path2").setAttribute("stroke-dasharray",dd[4].slice(0,5).concat(' 100')) ;
+                document.getElementById("text3").innerHTML = [dd[5]];
+                dr = ((dd[5].replace("ppm",""))/10);
+                document.getElementById("path3").setAttribute("stroke-dasharray",dr + " 100"); 
+                // document.getElementById("text1").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/cherry.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+          //ds[0].split(" ")
+          //dd = ds[0].split(" ")
+          //dd[3], dd[4],dd[5]
+          
+          function loadDoc2() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("text1").innerHTML = [dd[3]];
+                document.getElementById("path1").setAttribute("stroke-dasharray",dd[3].slice(0,5).concat(' 100')) ;
+                document.getElementById("text2").innerHTML = [dd[4]];
+                document.getElementById("path2").setAttribute("stroke-dasharray",dd[4].slice(0,5).concat(' 100')) ;
+                document.getElementById("text3").innerHTML = [dd[5]];
+                dr = ((dd[5].replace("ppm",""))/10);
+                document.getElementById("path3").setAttribute("stroke-dasharray",dr + " 100"); 
+                // document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/lulu.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+          
+          function loadDoc3() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("text1").innerHTML = [dd[3]];
+                document.getElementById("path1").setAttribute("stroke-dasharray",dd[3].slice(0,5).concat(' 100')) ;
+                document.getElementById("text2").innerHTML = [dd[4]];
+                document.getElementById("path2").setAttribute("stroke-dasharray",dd[4].slice(0,5).concat(' 100')) ;
+                document.getElementById("text3").innerHTML = [dd[5]];
+                dr = ((dd[5].replace("ppm",""))/10);
+                document.getElementById("path3").setAttribute("stroke-dasharray",dr + " 100"); 
+                // document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/red.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+
+          function loadDoc4() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("text1").innerHTML = [dd[3]];
+                document.getElementById("path1").setAttribute("stroke-dasharray",dd[3].slice(0,5).concat(' 100')) ;
+                document.getElementById("text2").innerHTML = [dd[4]];
+                document.getElementById("path2").setAttribute("stroke-dasharray",dd[4].slice(0,5).concat(' 100')) ;
+                document.getElementById("text3").innerHTML = [dd[5]];
+                dr = ((dd[5].replace("ppm",""))/10);
+                document.getElementById("path3").setAttribute("stroke-dasharray",dr + " 100"); 
+                // document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/angel.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+
+          function loadDoc5() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                ds = this.responseText.split(",");
+                //ds[0];
+                ds[0].split(" ");
+                dd = ds[0].split(" ");
+                document.getElementById("text1").innerHTML = [dd[3]];
+                document.getElementById("path1").setAttribute("stroke-dasharray",dd[3].slice(0,5).concat(' 100')) ;
+                document.getElementById("text2").innerHTML = [dd[4]];
+                document.getElementById("path2").setAttribute("stroke-dasharray",dd[4].slice(0,5).concat(' 100')) ;
+                document.getElementById("text3").innerHTML = [dd[5]];
+                dr = ((dd[5].replace("ppm",""))/10);
+                document.getElementById("path3").setAttribute("stroke-dasharray",dr + " 100"); 
+                // document.getElementById("demo").innerHTML = ["溫度:",dd[3],"濕度：",dd[4],"濕度：",dd[5]];
+              }    
+            };
+            xhttp.open("GET", "http://192.168.43.211/irene.php", true);
+            //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+            xhttp.send();
+          }
+
+
+          </script>
+          
+          
+          <div style="height: 20px"></div>
+          <div id="css-table-im" class="css-table-im">
+            <div class="tbody">
+              <div class="tr">
+                <div class="td">溫度</div>
+                <div class="td">
+                  <svg  xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 50 42' width='150' height='126'>
+                  <path d='M10 37 a20 20 0 1 1 24 0'  stroke='#DDD' fill='#d4c0b3' stroke-width='5' />
+                  <path id="path1" d='M10 37 a20 20 0 1 1 24 0'  stroke='#6a6059' fill='none' stroke-width='4' stroke-dasharray='0 100' />
+                  <!-- '25 100' /> -->
+                  <path d='M10 37 a20 20 0 1 1 24 0'  stroke='#EEE' fill='none' stroke-width='5' stroke-dasharray='0.5 9.5' /> 
+                  <!-- //document.getElementById("demo").innerHTML = dd[3]('\n'); -->
+                  <text id="text1" x='22' y='22' fill='#FFF' text-anchor='middle' alignment-baseline='middle' style='font: bold 7px 微軟正黑體 Arial'>    ℃</text>
+                  </svg>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="td">濕度</div>
+                <div class="td">
+                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 50 42' width='150' >
+                    <path d='M10 37 a20 20 0 1 1 24 0'  stroke='#DDD' fill='#d4c0b3' stroke-width='5' />
+                    <path id="path2" d='M10 37 a20 20 0 1 1 24 0'  stroke='#6a6059' fill='none' stroke-width='4' stroke-dasharray='0 100' />
+                    <path d='M10 37 a20 20 0 1 1 24 0'  stroke='#EEE' fill='none' stroke-width='5' stroke-dasharray='0.5 9.5' />
+                    <text id="text2" x='22' y='22' fill='#FFF' text-anchor='middle' alignment-baseline='middle' style='font: bold 7px 微軟正黑體 Arial'>   %</text>
+                  </svg>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="td">空氣品質</div>
+                <div class="td">
+                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -2 50 42' width='150' >
+                    <path d='M10 37 a20 20 0 1 1 24 0'  stroke='#DDD' fill='#d4c0b3' stroke-width='5' />
+                    <path id="path3" d='M10 37 a20 20 0 1 1 24 0'  stroke='#6a6059' fill='none' stroke-width='4' stroke-dasharray='0 100' />
+                    <path d='M10 37 a20 20 0 1 1 24 0'  stroke='#FFF' fill='none' stroke-width='5' stroke-dasharray='0.5 9.5' />
+                    <text id="text3" x='22' y='22' fill='#FFF' text-anchor='middle' alignment-baseline='middle' style='font: bold 6.2px 微軟正黑體 Arial'>   ppm</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div id="right_part" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <nav>
+            <form id="droplist"> 
+                <label for="sensor">歷史數據 : </label>
+                <select id="sensor" name="sensor">
+                    <option >請選擇</option>
+                    <option value="cherry">Cherry</option>
+                    <option value="lulu">LuLu</option>
+                    <option value="red">Red</option>
+                    <option value="angel">Angel</option>
+                    <option value="irene">Irene</option>
+                </select>
+            </form>
+            <script>
+
+                function car_sel(ev) {
+                    evt =ev
+                    console.log(ev.target.value);
+                    if(ev.target.value == "cherry")
+                    {
+                      loadhistory();
+                    }
+                    else if(ev.target.value == "lulu")
+                    {
+                      loadhistory2();
+                    }
+                    else if(ev.target.value == "red")
+                    {
+                      loadhistory3();
+                    }
+                    else if(ev.target.value == "angel")
+                    {
+                      loadhistory4();
+                    }
+                    else if(ev.target.value == "irene")
+                    {
+                      loadhistory5();
+                    }
+                    else
+                    {
+                      console.log("read failed");
+                    }
+                }
+                sensor.onchange = car_sel
+
+                // function car_sel2(ev2) {
+                //     evt =ev2
+                //     console.log(ev2.target.value);
+                //     loadhistory2();
+
+                // }
+                // sensor.onchange = car_sel2
+                
+            </script>
+            <script>
+            function loadhistory() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    ds = this.responseText.split(",");
+                    //ds[0];
+                    ds[0].split(" ");
+                    n=0;
+                    dd = ds.slice(n,n+30);
+                    
+                    ee=dd.map(x=>x.split(" "))
+                    
+                    // Temperature
+                    ff = ee.map(x=>[x[3], x[4], x[5]]);
+                    gg = ff.map(x=>x.join('\t'))
+                    hh = gg.map(x=>x.split('\t')[0])
+                    // hh=hh.reverse();
+                    sp = hh[0].slice(5)
+                    
+                    hh_s=hh.map(x=>x.split(sp)[0])
+                    nuevo = hh_s.map((i) => Number(i));
+                    sum=nuevo.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    var avg=(sum/nuevo.length).toFixed(2)
+                    
+                    
+                    
+                    ii = hh.map(x=>x.split(sp)[0])
+
+                  
+
+
+                    // ii= ii.map(x=>((x.split(sp)[0])**3.7)/4500)
+                    ii= ii.map(x=>((54.7-(x.split(sp)[0]))**4)/11000)
+                    
+                    ar = []
+                    ii.forEach((y, x)=>ar.push(`${x*11},${y}`))
+                    
+                    
+                    // Humidity
+                    ff2 = ee.map(x=>x[4])
+                    ar2=[]
+                    sp2=ff2[0].slice(5)
+                    
+                    ff2_s=ff2.map(x=>x.split(sp2)[0])
+                    nuevo2 = ff2_s.map((i) => Number(i));
+                    sum2=nuevo2.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    var avg2=(sum2/nuevo2.length).toFixed(2)
+                    
+                    
+                    ii2 = ff2.map(x=>((119-x.split(sp2)[0])**3)/3250)
+                    ii2.forEach((y, x)=>ar2.push(`${x*11},${y}`))
+                    
+                    //ppm
+                    ff3 = ee.map(x=>x[5])
+                    ar3=[]
+                    sp3=ff3[0].slice(6)
+                    ff3_s=ff3.map(x=>x.split(sp3)[0])
+                    nuevo3 = ff3_s.map((i) => Number(i));
+                    sum3=nuevo3.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    var avg3=(sum3/nuevo3.length).toFixed(2)
+                    ii3 = ff3.map(x=>(x.split(sp3)[0])/11.6)
+                    ii3.forEach((y, x)=>ar3.push(`${x*11},${y}`))
+
+              
+                    draw1.setAttribute("points",  ar.join(" "));
+                    draw2.setAttribute("points",  ar2.join(" "));
+                    draw3.setAttribute("points",  ar3.join(" "));
+                    document.getElementById("avg").innerHTML = "平均溫度：" + avg +"℃" ;
+                    document.getElementById("avg2").innerHTML = "平均濕度：" + avg2 + "%" ;
+                    document.getElementById("avg3").innerHTML = "平均：" + avg3 + "(ppm)" ;
+              
+                    // document.getElementById("demo").innerHTML = gg.join('\n');  //顯示歷史數值
+                  }    
+                };
+                xhttp.open("GET", "http://192.168.43.211/cherry.php", true);
+                //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+                xhttp.send();
+              }
+
+              function loadhistory2() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function arrd2() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    ds = this.responseText.split(",");
+                    //ds[0];
+                    ds[0].split(" ");
+                    n=0;
+                    dd = ds.slice(n,n+30);
+                    
+                    ee=dd.map(x=>x.split(" "))
+                    
+                    // Temperature
+                    ff = ee.map(x=>[x[3], x[4], x[5]]);
+                    gg = ff.map(x=>x.join('\t'))
+                    hh = gg.map(x=>x.split('\t')[0])
+                    // hh=hh.reverse();
+                    sp = hh[0].slice(5)
+                    
+                    hh_s=hh.map(x=>x.split(sp)[0])
+                    nuevo = hh_s.map((i) => Number(i));
+                    sum=nuevo.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    var avg=(sum/nuevo.length).toFixed(2)
+                    
+                    
+                    
+                    ii = hh.map(x=>x.split(sp)[0])
+
+                  
+
+
+                    // ii= ii.map(x=>((x.split(sp)[0])**3.7)/4500)
+                    ii= ii.map(x=>((54.7-(x.split(sp)[0]))**4)/11000)
+                    
+                    ar = []
+                    ii.forEach((y, x)=>ar.push(`${x*11},${y}`))
+                    
+                    
+                    // Humidity
+                    ff2 = ee.map(x=>x[4])
+                    ar2=[]
+                    sp2=ff2[0].slice(5)
+                    
+                    ff2_s=ff2.map(x=>x.split(sp2)[0])
+                    nuevo2 = ff2_s.map((i) => Number(i));
+                    sum2=nuevo2.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    var avg2=(sum2/nuevo2.length).toFixed(2)
+                    
+                    ii2 = ff2.map(x=>((119-x.split(sp2)[0])**3)/3600)
+                    ii2.forEach((y, x)=>ar2.push(`${x*11},${y}`))
+                    
+                    //ppm
+                    ff3 = ee.map(x=>x[5])
+                    ar3=[]
+                    sp3=ff3[0].slice(4)
+                    ff3_s=ff3.map(x=>x.split(sp3)[0])
+                    nuevo3 = ff3_s.map((i) => Number(i));
+                    sum3=nuevo3.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    avg3=(sum3/nuevo3.length).toFixed(2)
+                    ii3 = ff3.map(x=>x.split(sp3)[0])
+                    ii3.forEach((y, x)=>ar3.push(`${x*11},${y*0.5}`))
+
+              
+                    draw1.setAttribute("points",  ar.join(" "));
+                    draw2.setAttribute("points",  ar2.join(" "));
+                    draw3.setAttribute("points",  ar3.join(" "));
+                    document.getElementById("avg").innerHTML = "平均溫度：" + avg + "℃";
+                    document.getElementById("avg2").innerHTML = "平均濕度：" + avg2 + "%";
+                    document.getElementById("avg3").innerHTML = "平均：" + avg3 + "(ppm)" ;
+              
+                    // document.getElementById("demo").innerHTML = gg.join('\n');  //顯示歷史數值
+                  }    
+                };
+                xhttp.open("GET", "http://192.168.43.211/lulu.php", true);
+                //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+                xhttp.send();
+              }
+              function loadhistory3() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function arrd3() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    ds = this.responseText.split(",");
+                    //ds[0];
+                    ds[0].split(" ");
+                    n=0;
+                    dd = ds.slice(n,n+30);
+                    
+                    ee=dd.map(x=>x.split(" "))
+                    
+                    // Temperature
+                    ff = ee.map(x=>[x[3], x[4], x[5]]);
+                    gg = ff.map(x=>x.join('\t'))
+                    hh = gg.map(x=>x.split('\t')[0])
+                    // hh=hh.reverse();
+                    sp = hh[0].slice(5)
+                    
+                    hh_s=hh.map(x=>x.split(sp)[0])
+                    nuevo = hh_s.map((i) => Number(i));
+                    sum=nuevo.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    var avg=(sum/nuevo.length).toFixed(2)
+                    
+                    
+                    
+                    ii = hh.map(x=>x.split(sp)[0])
+
+                  
+
+
+                    // ii= ii.map(x=>((x.split(sp)[0])**3.7)/4500)
+                    ii= ii.map(x=>((54.7-(x.split(sp)[0]))**4)/11000)
+                    
+                    ar = []
+                    ii.forEach((y, x)=>ar.push(`${x*11},${y}`))
+                    
+                    
+                    // Humidity
+                    ff2 = ee.map(x=>x[4])
+                    ar2=[]
+                    sp2=ff2[0].slice(5)
+                    
+                    ff2_s=ff2.map(x=>x.split(sp2)[0])
+                    nuevo2 = ff2_s.map((i) => Number(i));
+                    sum2=nuevo2.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    var avg2=(sum2/nuevo2.length).toFixed(2)
+                    
+                    ii2 = ff2.map(x=>((119-x.split(sp2)[0])**3)/3600)
+                    ii2.forEach((y, x)=>ar2.push(`${x*11},${y}`))
+                    
+                    //ppm
+                    ff3 = ee.map(x=>x[5])
+                    ar3=[]
+                    sp3=ff3[0].slice(4)
+                    ff3_s=ff3.map(x=>x.split(sp3)[0])
+                    nuevo3 = ff3_s.map((i) => Number(i));
+                    sum3=nuevo3.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    avg3=(sum3/nuevo3.length).toFixed(2)
+                    ii3 = ff3.map(x=>x.split(sp3)[0])
+                    ii3.forEach((y, x)=>ar3.push(`${x*11},${y*0.5}`))
+
+              
+                    draw1.setAttribute("points",  ar.join(" "));
+                    draw2.setAttribute("points",  ar2.join(" "));
+                    draw3.setAttribute("points",  ar3.join(" "));
+                    document.getElementById("avg").innerHTML = "平均溫度：" + avg + "℃";
+                    document.getElementById("avg2").innerHTML = "平均濕度：" + avg2 + "";
+                    document.getElementById("avg3").innerHTML = "平均：" + avg3 + "(ppm)" ;
+              
+                    // document.getElementById("demo").innerHTML = gg.join('\n');  //顯示歷史數值
+                  }    
+                };
+                xhttp.open("GET", "http://192.168.43.211/red.php", true);
+                //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+                xhttp.send();
+              }
+              function loadhistory4() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function arrd4() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    ds = this.responseText.split(",");
+                    //ds[0];
+                    ds[0].split(" ");
+                    n=0;
+                    dd = ds.slice(n,n+30);
+                    
+                    ee=dd.map(x=>x.split(" "))
+                    
+                    // Temperature
+                    ff = ee.map(x=>[x[3], x[4], x[5]]);
+                    gg = ff.map(x=>x.join('\t'))
+                    hh = gg.map(x=>x.split('\t')[0])
+                    // hh=hh.reverse();
+                    sp = hh[0].slice(5)
+                    
+                    hh_s=hh.map(x=>x.split(sp)[0])
+                    nuevo = hh_s.map((i) => Number(i));
+                    sum=nuevo.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    avg=(sum/nuevo.length).toFixed(2)
+                    
+                    
+                    
+                    ii = hh.map(x=>x.split(sp)[0])
+
+                  
+
+
+                    // ii= ii.map(x=>((x.split(sp)[0])**3.7)/4500)
+                    ii= ii.map(x=>((54.7-(x.split(sp)[0]))**4)/11000)
+                    
+                    ar = []
+                    ii.forEach((y, x)=>ar.push(`${x*11},${y}`))
+                    
+                    
+                    // Humidity
+                    ff2 = ee.map(x=>x[4])
+                    ar2=[]
+                    sp2=ff2[0].slice(5)
+                    
+                    ff2_s=ff2.map(x=>x.split(sp2)[0])
+                    nuevo2 = ff2_s.map((i) => Number(i));
+                    sum2=nuevo2.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    var avg2=(sum2/nuevo2.length).toFixed(2)
+                    
+                    ii2 = ff2.map(x=>((119-x.split(sp2)[0])**3)/3600)
+                    ii2.forEach((y, x)=>ar2.push(`${x*11},${y}`))
+                    
+                    //ppm
+                    ff3 = ee.map(x=>x[5])
+                    ar3=[]
+                    sp3=ff3[0].slice(4)
+                    ff3_s=ff3.map(x=>x.split(sp3)[0])
+                    nuevo3 = ff3_s.map((i) => Number(i));
+                    sum3=nuevo3.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    avg3=(sum3/nuevo3.length).toFixed(2)
+                    ii3 = ff3.map(x=>x.split(sp3)[0])
+                    ii3.forEach((y, x)=>ar3.push(`${x*11},${y*0.5}`))
+
+              
+                    draw1.setAttribute("points",  ar.join(" "));
+                    draw2.setAttribute("points",  ar2.join(" "));
+                    draw3.setAttribute("points",  ar3.join(" "));
+                    document.getElementById("avg").innerHTML = "平均溫度：" + avg +"℃";
+                    document.getElementById("avg2").innerHTML = "平均濕度：" + avg2 +"%";
+                    document.getElementById("avg3").innerHTML = "平均：" + avg3 + "(ppm)" ;
+              
+                    // document.getElementById("demo").innerHTML = gg.join('\n');  //顯示歷史數值
+                  }    
+                };
+                xhttp.open("GET", "http://192.168.43.211/angel.php", true);
+                //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+                xhttp.send();
+              }
+              function loadhistory5() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function arrd5() {
+                  if (this.readyState == 4 && this.status == 200) {
+                    ds = this.responseText.split(",");
+                    //ds[0];
+                    ds[0].split(" ");
+                    n=0;
+                    dd = ds.slice(n,n+30);
+                    
+                    ee=dd.map(x=>x.split(" "))
+                    
+                    // Temperature
+                    ff = ee.map(x=>[x[3], x[4], x[5]]);
+                    gg = ff.map(x=>x.join('\t'))
+                    hh = gg.map(x=>x.split('\t')[0])
+                    // hh=hh.reverse();
+                    sp = hh[0].slice(5)
+                    
+                    hh_s=hh.map(x=>x.split(sp)[0])
+                    nuevo = hh_s.map((i) => Number(i));
+                    sum=nuevo.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    avg=(sum/nuevo.length).toFixed(2)
+                    
+                    
+                    
+                    ii = hh.map(x=>x.split(sp)[0])
+
+                  
+
+
+                    // ii= ii.map(x=>((x.split(sp)[0])**3.7)/4500)
+                    ii= ii.map(x=>((54.7-(x.split(sp)[0]))**4)/11000)
+                    
+                    ar = []
+                    ii.forEach((y, x)=>ar.push(`${x*11},${y}`))
+                    
+                    
+                    // Humidity
+                    ff2 = ee.map(x=>x[4])
+                    ar2=[]
+                    sp2=ff2[0].slice(5)
+                    
+                    ff2_s=ff2.map(x=>x.split(sp2)[0])
+                    nuevo2 = ff2_s.map((i) => Number(i));
+                    sum2=nuevo2.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    var avg2=(sum2/nuevo2.length).toFixed(2)
+                    
+                    ii2 = ff2.map(x=>((119-x.split(sp2)[0])**3)/3600)
+                    ii2.forEach((y, x)=>ar2.push(`${x*11},${y}`))
+                    
+                    //ppm
+                    ff3 = ee.map(x=>x[5])
+                    
+                    ar3=[]
+                    sp3=ff3[0].slice(4)
+                    ff3_s=ff3.map(x=>x.split(sp3)[0])
+                    nuevo3 = ff3_s.map((i) => Number(i));
+                    sum3=nuevo3.reduce(function(a, b) {
+                    return a + b;}, 0);
+                    avg3=(sum3/nuevo3.length).toFixed(2)
+                    ii3 = ff3.map(x=>x.split(sp3)[0])
+                    ii3.forEach((y, x)=>ar3.push(`${x*11},${y*0.5}`))
+
+                    
+                    draw1.setAttribute("points",  ar.join(" "));
+                    draw2.setAttribute("points",  ar2.join(" "));
+                    draw3.setAttribute("points",  ar3.join(" "));
+                    document.getElementById("avg").innerHTML = "平均溫度：" + avg +"℃";
+                    document.getElementById("avg2").innerHTML = "平均濕度：" + avg2 +"%";
+                    document.getElementById("avg3").innerHTML = "平均：" + avg3 + "(ppm)" ;
+              
+                    // document.getElementById("demo").innerHTML = gg.join('\n');  //顯示歷史數值
+                  }    
+                };
+                xhttp.open("GET", "http://192.168.43.211/irene.php", true);
+                //xhttp.setRequestHeader( "Access-Control-Allow-Origin" ,"*" );
+                xhttp.send();
+              }
+            </script>
+          </nav>
+          <aside>                 
+            <div id="css-table" class="css-table">
+                <div class="tbody">
+                  <div class="tr">
+                    <div class="td">溫度 (℃)</div>
+                  </div>
+                  <div class="tr2">
+                    <div class="td">
+                    <div>
+                      <svg preserveAspectRatio="xMinYMin" width="300px" viewbox="0,0,300,155" >
+                        <rect rx=0 width=300px height=200px fill='#bcab9f' stroke='#FFF' stroke />
+                        
+                        <path d="M0 0 v200"stroke='#000000'  stroke-dasharray="1 30" stroke-width="5"/>
+                        <text x="5" y="35" transform="translate(0,0)">30
+                        <tspan x="5" dy="31">25</tspan>
+                        <tspan x="5" dy="31">20</tspan>
+                        <tspan x="5" dy="31">15</tspan>
+                        </text>
+                        <path id='vl' d="M50 0 v200"stroke='#FFFFFF'/>
+                        <polyline id="draw1" points="0, 0 0, 120" fill="none" stroke="#333" stroke-width="2"/>
+                      </svg><br>
+                      <svg width="300px" height="50px">
+                        <text x="0" y="20" font-size="2em">
+                        <tspan id="avg" x="80" font-size="0.8em">整體平均（30筆）</tspan>
+                        <tspan x="30" dy="22" id="msg">小時</tspan>
+                        <tspan x="150" id="history1" >溫度：</tspan>
+                        </text>
+                        </svg>
+                    </div>
+                    <script>
+                    function fix2(v)
+                    {
+                        [a,b] = v.split('.')
+                        b = b.slice(0,2)
+                        return [a,b].join('.')
+                    }
+
+                    // function ary_n(en, n)
+                    // {
+                    // pl = en.parentNode.querySelector('polyline')
+                    // pts = pl.getAttribute('points')
+                    // ar = pts.split(' ')
+                    // br = ar.map(x => fix2(x.split(',')[1]) )
+                    // return br[n]
+                    // }
+
+                    function ary_n(en, n)
+                    {
+                    pl = en.parentNode.querySelector('polyline')
+                    pts = pl.getAttribute('points')
+                    ar = pts.split(' ')
+                    br = ar.map(x => (x.split(',')[1]))
+                    return br[n]
+                    }
+
+                    function move(ev) {
+                        var x = parseInt(ev.offsetX /"10")
+                        var d = `M${ev.offsetX} 0 v200`
+                        vl.setAttribute('d', d)
+                        evt=ev
+                        console.log(ary_n(this, x))
+                        h1=54.7-(Math.sqrt(Math.sqrt(((ary_n(this, x)))*11000)))
+
+                        msg.innerHTML = `${x} hr(s) ago`
+                        history1.innerHTML = `溫度：${h1} ℃`
+
+                    }
+                       // cs = document.querySelectorAll('circle')
+                       rt = document.querySelector('rect')
+                       rt.onmousemove = move
+                      //  cs.forEach(x=> x.onmouseenter=entry)
+                      //  msg.innerText = cs[0].getAttribute('cx')
+                       function entry(ev) {
+                         var x = this.getAttribute('cx')
+                         var y = this.getAttribute('cy')
+                         msg.innerText = `x:${x} y:${y}`
+                         evt = ev
+                       }
+                     </script>
+                    </div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">濕度 (%)</div>
+                  </div>
+                  <div class="tr2">
+                    <div class="td">
+                    
+                    <div>
+                      <svg preserveAspectRatio="xMinYMin" width="300px" viewbox="0,0,300,155" >
+                        <rect id="rect2" rx=0 width=300px height=200px fill='#bcab9f' stroke='#FFF' stroke />
+                        <path d="M0 0 v200"stroke='#000000'  stroke-dasharray="1 30" stroke-width="5"/>
+                        <text x="5" y="35" transform="translate(0,0)">80
+                        <tspan x="5" dy="14">&nbsp</tspan>
+                        <tspan x="5" dy="14">60</tspan>
+                        <tspan x="5" dy="14">&nbsp</tspan>
+                        <tspan x="5" dy="14">40</tspan>
+                        <tspan x="5" dy="14">&nbsp</tspan>
+                        <tspan x="5" dy="14">20</tspan>
+                        <!-- <tspan x="5" dy="11">20%</tspan> -->
+                        </text>
+                        <path id='vl2' d="M50 0 v200"stroke='#FFFFFF'/>
+                        <polyline id="draw2" points="0, 0 0, 120" fill="none" stroke="#333" stroke-width="2"/>
+                      </svg>
+                      <br>
+                    <svg width="300px" height="50px">
+                      <text x="0" y="20" font-size="2em">
+                        <tspan id="avg2" x="80" font-size="0.8em">整體平均（30筆）</tspan>
+                        <tspan x="27" dy="22" id="msg2">小時</tspan>
+                        <tspan x="150" id="history2" >濕度：</tspan>
+                        </text>
+                      </svg>
+                    </div>
+                    <script>
+                     function ary_n2(en, n)
+                    {
+                    pl = en.parentNode.querySelector('polyline')
+                    pts = pl.getAttribute('points')
+                    ar = pts.split(' ')
+                    br2 = ar2.map(x => (x.split(',')[1]))
+                    return br2[n]
+                    }
+
+                    function move(ev2) {
+                        var x = parseInt(ev2.offsetX /"10")
+                        var d = `M${ev2.offsetX} 0 v200`
+                        vl2.setAttribute('d', d)
+                        evt2=ev2
+                        console.log(ary_n2(this, x))
+                        h2=(119-(Math.pow(((ary_n2(this, x))*3250),(1/3)))).toFixed(2)
+
+                        msg2.innerHTML = `${x} hr(s) ago`
+                        history2.innerHTML = `濕度：${h2} %`
+
+                    }
+                       // cs = document.querySelectorAll('circle')
+                       rt2 = document.querySelector('#rect2')
+                       rt2.onmousemove = move
+                       // cs.forEach(x=> x.onmouseenter=entry)
+                       // msg.innerText = cs[0].getAttribute('cx')
+                       function entry(ev2) {
+                        //  var x = this.getAttribute('cx')
+                        //  var y = this.getAttribute('cy')
+                         msg2.innerText = `x:${x} y:${y}`
+                         evt2 = ev2
+                       }
+                     </script>
+                    </div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">空氣品質 (ppm)</div>
+                  </div>
+                  <div class="tr2">
+                    <div class="td">
+                    
+                         
+                    <svg preserveAspectRatio="xMinYMin" width="300px" viewbox="0,0,300,160" >
+                      <rect id="rect3" rx=0 width=300px height=200px fill='#bcab9f' stroke='#FFF' stroke />
+                      <path d="M0 0 v200"stroke='#000000'  stroke-dasharray="1 15" stroke-width="5"/>
+                      <text x="5" y="20" transform="translate(0,0)">1000
+                      <tspan x="5" dy="16">&nbsp</tspan>
+                      <tspan x="5" dy="16">750</tspan>
+                      <tspan x="5" dy="16">&nbsp</tspan>
+                      <tspan x="5" dy="16">500</tspan>
+                      <tspan x="5" dy="16">&nbsp</tspan>
+                      <tspan x="5" dy="16">250</tspan>
+                      <!-- <tspan x="5" dy="16">&nbsp</tspan> -->
+                      <!-- <tspan x="5" dy="16">100</tspan> -->
+                      <!-- <tspan x="5" dy="11">20%</tspan> -->
+                      </text>
+                      
+                      <path id='vl3' d="M50 0 v200"stroke='#FFFFFF'/>
+                      <polyline id="draw3" points="0, 0 0, 120" fill="none" stroke="#333" stroke-width="2"/>
+                    </svg>
+                    <br>
+                    <svg width="300px" height="50px">
+                     <text x="0" y="20" font-size="2em">
+                        <tspan id="avg3" x="80" font-size="0.8em">整體平均（30筆）</tspan>
+                        <tspan x="27" dy="22" id="msg3">小時</tspan>
+                        <tspan x="160" id="history3" >空氣品質：</tspan>
+                        </text>
+                      </svg>
+                    
+                    </div>
+                    <script>
+                      function ary_n3(en, n)
+                    {
+                    pl = en.parentNode.querySelector('polyline')
+                    pts = pl.getAttribute('points')
+                    ar = pts.split(' ')
+                    br3 = ar3.map(x => (x.split(',')[1]))
+                    return br3[n]
+                    }
+
+                    function move(ev3) {
+                        var x = parseInt(ev3.offsetX /"10")
+                        var d = `M${ev3.offsetX} 0 v200`
+                        vl3.setAttribute('d', d)
+                        evt3=ev3
+                        console.log(ary_n3(this, x))
+                        h3=((ary_n3(this, x))*11.6)
+
+                        msg3.innerHTML = `${x} hr(s) ago`
+                        history3.innerHTML = `${h3} ppm`
+
+                    }
+                       // cs = document.querySelectorAll('circle')
+                       rt3 = document.querySelector('#rect3')
+                       rt3.onmousemove = move
+                       // cs.forEach(x=> x.onmouseenter=entry)
+                       // msg.innerText = cs[0].getAttribute('cx')
+                       function entry(ev3) {
+                        //  var x = this.getAttribute('cx')
+                        //  var y = this.getAttribute('cy')
+                         msg3.innerText = `x:${x} y:${y}`
+                         evt3 = ev3
+                       }
+                     </script>
+                  </div>
+                </div>
+              </div>
+          </aside>
+        </div>
+        <footer>
+          <table>
+            <tr>
+              <td>
+                <li id="cwb">
+                  <a id="cwb" href = https://www.cwb.gov.tw target=_blank title=氣象局>氣象局</a>
+                </li>
+              </td>
+              <td>&nbsp&nbsp</td>
+              <td>
+                <li id="cwb">
+                  <a id="cwb" href = https://airtw.epa.gov.tw target=_blank title=環保署空氣品質監測網>環保署空氣品質監測網</a>
+                </li>
+              </td>
+              <td>&nbsp&nbsp</td>
+              <td>
+                <li id="cwb">
+                  <a id="cwb" href = https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=577&pid=10742 target=_blank title=舒適度指數>舒適度指數</a>
+                </li>
+              </td>
+            </tr>            
+          </table>
+            © Copyright
+        </footer>
+      </div>
+    </div>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    
+    
+  </body>
+</html>
