@@ -20,6 +20,8 @@ FLUSH PRIVILEGES;
 
 
 If you dont' setting up the above, your apache server will show you Not Found. lol
+
+
 sudo nano /etc/apache2/apache2.conf
 
 Include the following line at the bottom of the file, save and quit.
