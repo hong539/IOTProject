@@ -14,6 +14,7 @@ sudo mysql
 
 CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
 
+remind this line!!! ON *.*
 GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;
 
 FLUSH PRIVILEGES;
