@@ -10,6 +10,8 @@ https://askubuntu.com/questions/763336/cannot-enter-phpmyadmin-as-root-mysql-5-7
 Setting SQL User
 Create a user for phpMyAdmin
 
+sudo mysql
+
 CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
 
 GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;
