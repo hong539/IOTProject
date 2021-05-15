@@ -1,3 +1,7 @@
+If you want to change the passwd on Linux under GCP
+https://stackoverflow.com/questions/35992511/how-do-i-set-my-user-password-on-my-google-cloud-ubuntu-instance
+
+
 Setting Up LAMP on Compute Engine
 https://cloud.google.com/community/tutorials/setting-up-lamp
 
