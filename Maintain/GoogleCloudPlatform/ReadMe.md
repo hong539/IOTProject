@@ -1,4 +1,6 @@
 If you want to change the passwd on Linux under GCP
+
+
 https://stackoverflow.com/questions/35992511/how-do-i-set-my-user-password-on-my-google-cloud-ubuntu-instance
 
 
