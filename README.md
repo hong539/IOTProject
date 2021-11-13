@@ -8,6 +8,7 @@ We will build a system which monitors air-quality, temperature and humidity to m
 And also the IndoorAirBox.pdf file will explain more details about IndoorAirBox.
 
 These are our work assignments according on different directory.
+
 ESP8266
 
 Raspberry
